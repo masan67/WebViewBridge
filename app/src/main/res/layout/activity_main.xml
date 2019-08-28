@@ -13,24 +13,30 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="1"
-        android:gravity="center_horizontal">
+        android:layout_weight="0.5"
+        android:gravity="center">
 
-        <EditText
-            android:id="@+id/edit_text_to_web"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mandar texto a Web..."
-            android:autofillHints="textito a web"
-            android:textSize="15sp"
-            android:inputType="textAutoComplete"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"/>
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mandar a Web"/>
+            <Button
+                android:id="@+id/buttonwebview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WebView"/>
+
+            <Button
+                android:id="@+id/buttonJSON"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JSON"
+                android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -38,6 +44,22 @@
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"/>
+        android:layout_weight="2.5"
+        tools:visibility="gone"/>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Aqui va el JSON"
+            android:padding="10dp"/>
+
+    </ScrollView>
 
 </LinearLayout>
