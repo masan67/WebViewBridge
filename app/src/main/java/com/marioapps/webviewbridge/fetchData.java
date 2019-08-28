@@ -35,11 +35,7 @@ public class fetchData extends AsyncTask<Void,Void,Void> {
                 data = data + line;
             }
 
-            String str = "geekss@for@geekss";
             arrayStrings = data.split("null");
-
-
-
 
             JSONArray ja = new JSONArray(arrayStrings[1]);
             for(int i=0;i<ja.length();i++){
@@ -48,8 +44,7 @@ public class fetchData extends AsyncTask<Void,Void,Void> {
                         "Password:"+jo.get("password")+"\n"+
                         "Contact:"+jo.get("contact")+"\n"+
                         "Country:"+jo.get("country")+"\n";
-
-
+                
                 dataParsed = dataParsed + singleParsed +"\n";
             }
 
